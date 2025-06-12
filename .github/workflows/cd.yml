@@ -33,5 +33,5 @@ jobs:
         run:  gcloud info
 
       - name: Build and push docker image
-        run: gcloud build submit --tag us-central1-docker.pkg.dev/woven-howl-462720-h8/notely-ar-repo/notely:latest .
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/woven-howl-462720-h8/notely-ar-repo/notely:latest .
 
