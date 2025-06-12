@@ -7,11 +7,11 @@ import (
 
 func TestGetAPIKey(t *testing.T) {
 	tests := []struct {
-		name           string
-		headers        http.Header
-		expectedKey    string
-		expectedError  string
-		shouldError    bool
+		name          string
+		headers       http.Header
+		expectedKey   string
+		expectedError string
+		shouldError   bool
 	}{
 		{
 			name: "valid API key",
@@ -106,7 +106,7 @@ func TestGetAPIKey_SpecificErrorType(t *testing.T) {
 	// Test that the specific error type is returned for missing header
 	headers := http.Header{}
 	_, err := GetAPIKey(headers)
-	
+
 	if err != ErrNoAuthHeaderIncluded {
 		t.Errorf("expected ErrNoAuthHeaderIncluded, got %v", err)
 	}
